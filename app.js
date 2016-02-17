@@ -10,5 +10,15 @@ angular.module('myApp', [])
   self.listTwo = [
   	'2.2', '2.3', '2.3'
   ]
+
+  self.addToList = function(item) {
+  	self.listOne.push(this.item);
+  	// console.log(this.item);
+  }
+
+  self.addToOtherList = function(itemTwo) {
+  	self.listTwo.push(this.itemTwo);
+  	// console.log(this.itemTwo);
+  }
   
 })
