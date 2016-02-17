@@ -11,6 +11,7 @@
   <div class="container">
     <h1 class="text-center">Homework 1</h1>
     <div ng-controller="mainCtrl as ctrl">
+      <h2>Part 1</h2>
       <label class="radio-inline">
         <input type="radio" name="radio1" id="radio1" value="red" ng-model='ctrl.changeColor'> red
       </label>
@@ -31,8 +32,26 @@
         </div>
       </div>
         
-        
-      
+      <h2>Part 2</h2>
+
+      <label class="checkbox-inline">
+        <input type="checkbox" ng-model="checked">Folder 1
+      </label>
+      <a href="#">
+        <ul ng-repeat="item in ctrl.listOne" ng-show="checked">
+          <li ng-bind="item"></li>
+        </ul>
+      </a>
+      <br>
+      <br>
+      <label class="checkbox-inline">
+        <input type="checkbox" ng-model="checked">Folder 2
+      </label>
+      <a href="#">
+        <ul ng-repeat="item in ctrl.listTwo track by $index" ng-show="checked">
+          <li ng-bind="item"></li>
+        </ul>
+      </a>
     </div>
   </div>
 
