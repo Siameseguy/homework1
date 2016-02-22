@@ -8,8 +8,8 @@
 
 </head>
 <body ng-app="myApp">
-  <div class="container">
-    <h1 class="text-center">Homework 1</h1>
+  <div class="container"
+    <h1 class="text-center">Homework Angular 2016/NYCDA</h1>
     <div ng-controller="mainCtrl as ctrl">
       <h2>Part 1</h2>
       <label class="radio-inline">
@@ -31,7 +31,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nemo illo est ratione quaerat saepe tenetur. Beatae sunt sequi totam, vitae fuga et quam perferendis, enim nam vel ex! Veritatis!</p>
         </div>
       </div>
-        
+       <hr> 
       <h2>Part 2</h2>
 
       <label class="checkbox-inline">
@@ -49,7 +49,6 @@
           <button type="submit" class="btn btn-default" ng-click="ctrl.addToList()">Add Item</button>
         </form>
       </a>
-      
 
       <br>
       <br>
@@ -60,7 +59,7 @@
         <ul ng-repeat="item in ctrl.listTwo track by $index" >
           <li ng-bind="item"></li>
         </ul>
-        <form class="form-inline">
+        <form id="myForm" class="form-inline">
           <div class="form-group">
             <label class="sr-only" for="listOne"></label>
             <input type="text" class="form-control" id="listOne" ng-value="item" ng-model="ctrl.itemTwo" placeholder="Enter Item">
@@ -68,24 +67,24 @@
           <button type="submit" class="btn btn-default" ng-click="ctrl.addToOtherList()">Add Item</button>
         </form>
       </a>
-      
-    </div>
-  </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
-
-
-
+      <hr>
+      <h2>Part 3</h2>
+      <h3 class="text-center">Todo List</h3>
+      <ul class="list-unstyled" ng-repeat="task in ctrl.todo track by $index">
+        <li>{{$index + 1}}. {{task}} &nbsp;&nbsp;
+          <button type="submit" class="btn btn-warning" ng-click="ctrl.deleteTask(task)">Delete Task</button>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <div class="form-group">
+          <label class="sr-only" for="todo"></label>
+          <input type="text" class="form-control" id="todo-list" ng-value="ctrl.task" ng-model="ctrl.task" placeholder="Enter Task">
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="ctrl.addToTodo(task)">Add Task</button>
+      </form>
+    </div>  
+  </div><!-- container -->
+</div><!-- body -->
 
   <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

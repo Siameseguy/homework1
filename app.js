@@ -20,5 +20,20 @@ angular.module('myApp', [])
   	self.listTwo.push(this.itemTwo);
   	// console.log(this.itemTwo);
   }
+
+  self.todo = [];
+
+  self.addToTodo = function(task) {
+    if(this.task != "") {
+      self.todo.push(this.task);
+    }
+
+    self.task = "";
+  }
+
+  self.deleteTask = function() {
+      self.todo.pop();
+  
+  }
   
 })
