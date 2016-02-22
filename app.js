@@ -11,6 +11,10 @@ angular.module('myApp', [])
   	'2.2', '2.3', '2.3'
   ]
 
+  self.changeTaskColor = function() {
+    
+  }
+
   self.addToList = function(item) {
   	self.listOne.push(this.item);
   	// console.log(this.item);

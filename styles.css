@@ -38,3 +38,16 @@ body {
     .green .child_div p {
     margin: 0;
   }
+
+
+  .red-task {
+    color: red;
+  }
+
+  .blue-task {
+    color: blue;
+  }
+
+   .green-task {
+    color: green;
+  }
