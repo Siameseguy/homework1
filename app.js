@@ -31,8 +31,11 @@ angular.module('myApp', [])
     self.task = "";
   }
 
-  self.deleteTask = function() {
-      self.todo.pop();
+  self.deleteTask = function(index) {
+    
+      self.todo.splice(index, 1);
+      // self.todo.pop();
+   
   
   }
   
