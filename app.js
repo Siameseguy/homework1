@@ -12,7 +12,7 @@ angular.module('myApp', [])
   ]
 
   self.changeTaskColor = function() {
-    
+   
   }
 
   self.addToList = function(item) {
@@ -36,11 +36,7 @@ angular.module('myApp', [])
   }
 
   self.deleteTask = function(index) {
-    
-      self.todo.splice(index, 1);
-      // self.todo.pop();
-   
-  
+    self.todo.splice(index, 1);
   }
   
 })

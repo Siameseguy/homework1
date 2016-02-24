@@ -71,16 +71,16 @@
       <h2>Part 3</h2>
       <h3 class="text-center">Todo List</h3>
       <ul class="list-unstyled" ng-repeat="task in ctrl.todo track by $index">
-        <li>{{$index + 1}}. {{task}} &nbsp;&nbsp; <br>
-          <label class="radio-inline" ng-class="ctrl.changeTaskColor">
-            <input type="radio" name="radio1" id="radio1" value="red-task" ng-model='ctrl.changeTaskColor'> red
+        <li ng-class="ctrl.changeTaskColor">{{$index + 1}}. {{task}} &nbsp;&nbsp; <br>
+          <label class="radio-inline">
+            <input type="radio" name="red-task" value="red-task" ng-model="ctrl.changeTaskColor"> Red
           </label>
-          <label class="radio-inline" ng-class="ctrl.changeTaskColor">
-            <input type="radio" name="radio2" id="radio2" value="blue-task" ng-model='ctrl.changeTaskColor'> blue
+          <label class="radio-inline">
+            <input type="radio" name="orange-task" value="orange-task" ng-model="ctrl.changeTaskColor"> Orange
           </label>
-          <label class="radio-inline" ng-class="ctrl.changeTaskColor">
-            <input type="radio" name="radio3" id="radio3" value="green-task" ng-model='ctrl.changeTaskColor'> green
-          </label><br>
+          <label class="radio-inline">
+            <input type="radio" name="green-task" value="green-task" ng-model="ctrl.changeTaskColor"> Green
+          </label>
           <button type="submit" class="btn btn-warning" ng-click="ctrl.deleteTask($index)">Delete Task</button>
         </li>
       </ul>
